@@ -20,6 +20,12 @@
         margin-left: 10%;
         }
 
+        input:focus {
+    outline: 2px solid dodgerblue;
+    background-color: #f0f8ff;
+}
+
+
         .title {
             color: #5C6AC4;
         }
@@ -36,8 +42,26 @@
         label {
              margin: 5%;
         }
+
     </style>
   </head>
+  <script>
+    function confirmSubmit() {
+        return confirm("Are you sure you want to submit your application form? :))");
+    }
+
+    function confirmReset() {
+        return confirm("Are you sure you want to clear out your application form? :))");
+    }
+
+    function checkEmpty(field) {
+        if (field.value.trim() === "") {
+            field.classList.add("error");
+        } else {
+            field.classList.remove("error");
+        }
+    }
+</script>
   <body>
      <header>
         <div>
@@ -59,25 +83,25 @@
         <fieldset>
           <legend>Your Credentials</legend><br/>
           <label> Student ID: 
-            <input type="text" name="sid" id="sid" required />
+            <input type="text" name="sid" id="sid" required onblur="checkEmpty(this)" />
           </label><br/><br/>
           <label> Full Name :
-            <input type="text" name="name" id="name" required />
+            <input type="text" name="name" id="name" required onblur="checkEmpty(this)" />
           </label><br/><br/>
           <label> Birthday :
-            <input type="date" name="dob" id="dob" />
+            <input type="date" name="dob" id="dob" required onblur="checkEmpty(this)" />
           </label><br/><br/>
           <label> Email Address :
-            <input type="text" name="emailadd" id="emailadd" /> 
+            <input type="text" name="emailadd" id="emailadd" required onblur="checkEmpty(this)"/> 
             </label><br/><br/>
             </fieldset>
 
         <fieldset>
             <label> Mobile Phone: 
-                <input type="text" name="mp" id="mp" required />
+                <input type="text" name="mp" id="mp" required onblur="checkEmpty(this)" />
               </label><br/><br/>
             <label> Grade Level:
-                <select name="grade_level" id="gl" required>
+                <select name="grade_level" id="gl" required onblur="checkEmpty(this)">
                     <option value="">--Select Grade--</option>
                     <option value="g7">Grade 7</option>
                     <option value="g8">Grade 8</option>
@@ -88,11 +112,12 @@
                 </select>
                 </label>
             <label>Intern or Extern:
+              <select name="inex" id="inex" required onblur="checkEmpty(this)"></select>
             <input type="radio" name="inex" value="intern"/> Intern
             <input type="radio" name="inex" value="extern"/> Extern
             </label><br/><br/>
             <label> Preferred Organization:
-                <select name="org" id="org" required>
+                <select name="org" id="org" required onblur="checkEmpty(this)">
                     <option value="">--Select Organization--</option>
                     <option value="tech">STEM clubs</option>
                     <option value="art">Arts Clubs</option>
@@ -102,7 +127,7 @@
                 </select>
                 </label><br/><br/>
             <label> Reason for your choice of club: 
-            <textarea name="reason" rows="4" required> </textarea>
+            <textarea name="reason" rows="4" required onblur="checkEmpty(this)"> </textarea>
             </label>
         </fieldset>
         <fieldset>
