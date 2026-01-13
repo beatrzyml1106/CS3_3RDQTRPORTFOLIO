@@ -112,9 +112,8 @@
                 </select>
                 </label>
             <label>Intern or Extern:
-              <select name="inex" id="inex" required onblur="checkEmpty(this)"></select>
-            <input type="radio" name="inex" value="intern"/> Intern
-            <input type="radio" name="inex" value="extern"/> Extern
+            <input type="radio" name="inex" value="intern" required/> Intern
+            <input type="radio" name="inex" value="extern" required/> Extern
             </label><br/><br/>
             <label> Preferred Organization:
                 <select name="org" id="org" required onblur="checkEmpty(this)">
@@ -132,7 +131,7 @@
         </fieldset>
         <fieldset>
           <legend>Action Buttons</legend>
-          <button type="submit"> Accept </button>
+          <button type="submit"> Accept </button> 
           <input type="reset" value=" Clear " />
         </fieldset> 
       </form>
