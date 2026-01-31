@@ -1,23 +1,72 @@
 <!DOCTYPE html>
 <html lang="en">
+<head>
+<link rel="stylesheet" href="../public/styles.css">
+
+<style>
+
+        .me{
+            background-color: white;
+            opacity: 0.3;
+            border-radius: 8px;
+        }
+
+        .me p{
+            text-align: center;
+            margin: 10px;
+            font-size: 17px;
+        }
+        
+        .me h2{
+            text-align: center;
+        }
+
+        .port{
+            background-color: white;
+            opacity: 0.3;
+            border-radius: 8px;
+            margin-right: 20px;
+        }
+
+        .port p{
+            margin: 10px;
+            text-align: center;
+            font-size: 20px;
+        }
+        
+        .port h2{
+            text-align: center;
+        }
+
+</style>
+</head>
 <body>
+
     <header>
-        <div>
-            <img src="./assets/pshslogo.png" alt="PSHS Logo" title="The Official Logo"width="50" height="50">
-            <h1>
-                My Portfolio of my work in the 2nd quarter
-            </h1>
+            <div class="container">
+                <div class="navbar">
+                    <img src="./assets/pshslogo.png" alt="PSHS Logo" title="The Official Logo"width="50" height="50">
+                    <a class="active" href="index.html">Home</a>
+                    <a href="../public/q2/q2links.html">2nd Quarter</a>
+                    <a href="../public/q3/q3links.html">3rd Quarter</a>
         </div>
-        <nav>
-            <a href="./public/2Q1GBerylliumTamon.html">1st Graded exercise</a>
-            <a href="./public/Q21NGBerylliumTamon.html">1st Non-Graded exercise</a>
-            <a href="./public/2Q2GBerylliumTamon.html"> Second Graded </a>
-            <a href="./public/q3/Q3_2GBerylliumTamon.html"> 3rd Quarter 2nd Graded</a>
-            <a href="#"> Third Graded </a>
-            <a href="#"> Access to our Project </a>
-        </nav>
+        </div>
+        </div>
     </header>
     <section>
-        
+        <div class="grid">
+            <div class="snoopy">
+                <img src="../assets/dog.png" alt="snoopy" height="300">
+            </div>
+            <div class="me">
+                <h2>About Me</h2>
+                <p>I am Beatriz Ymmanuelle A. Tamon, often called Bea, from Grade 9 Beryllium. I study in PSHS-MC and this serves as my portfolio for Computer Science 3. Some of my hobbies include reading, watching movies, playing volleyball, playing instruments like guitar and piano, baking, and hanging out with my friends. My favorite subjects are Biology, Chemistry, and Mathematics. I am looking forward to more CS classes!</p>
+            </div>
+            <div class="port">
+                <h2>Portfolio</h2>
+                <p>This portfolio is for all my works in CS3 in the second and third quarter. It contains my graded exercises and practices, as well as my project.</p>
+            </div>
+        </div>
+
     </section>
 </html>
