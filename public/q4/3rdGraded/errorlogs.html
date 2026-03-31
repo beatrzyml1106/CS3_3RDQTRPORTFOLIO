@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <meta name="author" content="Sir Roy/Al Mendoza">
+  <meta name="description" content="testing and debugging">
+  <meta name="keywords" content="testing and debugging">
+  <title>CS3 </title>
+  <link href="style.css" rel="stylesheet" type="text/css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Poppins:wght@300&family=Roboto&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/x-icon" href="images/favicon.ico">
+
+  <style>
+    tr:nth-child(1) ~ tr:nth-child(odd) {
+      background-color: lightgray;
+      color: black;
+    }
+    td, th {
+      padding: 10px;
+    }
+    table {
+      width: 90%;
+      margin: 0 auto;
+    }
+    caption {
+      font-size: 2em;
+      font-weight: bold;
+      padding: 10px;
+    }
+    
+  </style>
+</head>
+
+<body>
+  <header>
+    <nav>
+      <a href="index.html#start">Table</a>
+      <a href="index.html#input">Input</a>
+      <a href="index.html#output">Output</a>
+    </nav>
+    
+    <h1 style="padding: 30px">Your Name / Section Mar 2026 </h1>
+  </header>
+
+  <section id="table">
+    <table> 
+      <caption> Error Logs - place errors found in the table below</caption>
+      <tr class="rColor">
+        <th> item# </th> 
+        <th> code line#<br/>CSS or JS </th> 
+        <th> Description</th>
+        <th> Correction Done</th>
+      </tr>
+      <tr>
+        <td> 1 </td> 
+        <td> Line 26 </br> JS </td> 
+        <td> Missing curly bracket at the end of the code </td>
+        <td> I added a curly bracket to resolve the syntax error. </td>
+      </tr>
+      <tr>
+        <td> 2 </td> 
+        <td> Line 31 </br> CSS</td> 
+        <td> Wrong value used since "display: block" stacks the links instead of keeping them in one line</td>
+        <td> Changed "display: block" to "display: inline-block" to keep them in the same line/row.</td>
+      </tr>
+      <tr>
+        <td> 3 </td> 
+        <td> Line 38 </br> CSS</td> 
+        <td> Space in between selector and pseudo class, making it null.</td>
+        <td> Deleted the space and made "nav a :hover" to "nav a:hover'</td>
+      </tr>
+      <tr>
+        <td> 4 </td> 
+        <td> Line 26 </br> CSS</td> 
+        <td> No specification of position and margin for navigation bar.</td>
+        <td> I added "position: fixed;
+    top: 0;
+    left: 0;" to keep it on top, as the first line of the code, and to keep it fixed even while scrolling.</td>
+      </tr>
+      <tr>
+        <td> 5 </td> 
+        <td> Line 7 and 8</br> JS</td> 
+        <td> Wrong property names</td>
+        <td> I changed it from "point.styleleft" and "point.stylebottom" to "point.style.left" and "point.style.bottom". </td>
+      </tr>
+      <tr>
+        <td> 6 </td> 
+        <td> Line 92 </br> CSS</td> 
+        <td> Wrong image path</td>
+        <td> I corrected the path of the url for the image.</td>
+      </tr>
+      <tr>
+        <td> 7 </td> 
+        <td> Line 7 </br> CSS</td> 
+        <td> Multiple font-families that override each other.</td>
+        <td> I deleted the two previous lines of font-families since only the last one counts.</td>
+      </tr>
+      <tr>
+        <td> 8 </td> 
+        <td> Line 54 </br> CSS</td> 
+        <td> Missing "positioning" property for .point</td>
+        <td> I added 'position: absolute"</td>
+      </tr>
+      <tr>
+        <td> 9 </td> 
+        <td> Line 12 </br> CSS</td> 
+        <td> The properties in1 and out1 are not retrieved from code</td>
+        <td> I added document.getElementById('in1') and document.getElementById('out1')</td>
+      </tr>
+      <tr>
+        <td> 10 </td> 
+        <td> Line 1 </br> JS</td> 
+        <td> function plotPoint is not taking any parameters</td>
+        <td> I added x0, y0, x, and y as parameters</td>
+      </tr>
+     
+    </table>
+    <hr>
+  </section>
+  
+   
+  <!--- anchors for socmed site are done with image sprites -->
+  <footer>
+    <a href="https://facebook.com"> 
+    <div class="icon facebook"></div>
+    </a>
+    <a href="https://twitter.com">
+    <div class="icon twitter"></div>
+    </a>
+    <a href="https://github.com">
+    <div class="icon github"></div>
+    </a>
+  </footer>
+ 
+</body>
+
+</html>
